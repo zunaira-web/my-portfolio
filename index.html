@@ -712,23 +712,18 @@ As a beginner in front-end development, I took the initiative to build a functio
 </footer>
 <script>
 function toggleSidebar() {
-    let sidebar = document.getElementById("sidebar");
-    let overlay = document.getElementById("overlay");
-
+    var sidebar = document.getElementById("sidebar");
     sidebar.classList.toggle("active");
-    overlay.classList.toggle("active");
 }
 
 document.addEventListener("click", function(event) {
-    let sidebar = document.getElementById("sidebar");
-    let hamburger = document.querySelector(".hamburger");
-    let overlay = document.getElementById("overlay");
+    var sidebar = document.getElementById("sidebar");
+    var hamburger = document.querySelector(".hamburger");
 
     if (sidebar.classList.contains("active") &&
         !sidebar.contains(event.target) &&
         !hamburger.contains(event.target)) {
         sidebar.classList.remove("active");
-        overlay.classList.remove("active");
     }
 });
 </script>
