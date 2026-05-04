@@ -712,14 +712,13 @@ As a beginner in front-end development, I took the initiative to build a functio
 </footer>
 <script>
 function toggleSidebar() {
-    var sidebar = document.getElementById("sidebar");
-    sidebar.classList.toggle("active");
+    document.getElementById("sidebar").classList.toggle("active");
 }
-
 document.addEventListener("click", function(event) {
-    var sidebar = document.getElementById("sidebar");
-    var hamburger = document.querySelector(".hamburger");
+    let sidebar = document.getElementById("sidebar");
+    let hamburger = document.querySelector(".hamburger");
 
+    // agar sidebar open hai aur click sidebar ya hamburger ke bahar ho
     if (sidebar.classList.contains("active") &&
         !sidebar.contains(event.target) &&
         !hamburger.contains(event.target)) {
